@@ -121,10 +121,6 @@ export default async function SectionPage({
         <section style={{ paddingTop: 56 }}>
           <div className="container">
             <ContactForm locale={locale} t={dict.contact} />
-            <p className="impact-note" style={{ marginTop: 36 }}>
-              {locale === "tr" ? "Alternatif: " : "Alternative: "}
-              <a href={`mailto:${dict.finalCta.mail}`} style={{ color: "var(--gold)" }}>{dict.finalCta.mail}</a>
-            </p>
           </div>
         </section>
       )}
