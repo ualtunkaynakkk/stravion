@@ -111,5 +111,53 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "db_error" }, { status: 500 });
   }
 
+  /* ---------- bildirim maili (best effort) ----------
+     Kayıt yukarıda veritabanına yazıldı. Mail yalnızca haberci:
+     Resend çökse, key süresi dolsa veya kota bitse bile talep kaybolmaz
+     ve kullanıcı hata görmez. Bu yüzden hatalar sadece loglanır.        */
+  const resendKey = process.env.RESEND_API_KEY;
+  const notifyTo = process.env.NOTIFY_EMAIL;
+
+  if (resendKey && notifyTo) {
+    try {
+      const satirlar = [
+        `Ad Soyad : ${v.data.name}`,
+        `E-posta  : ${v.data.email}`,
+        `Şirket   : ${v.data.company || "—"}`,
+        `Telefon  : ${v.data.phone || "—"}`,
+        `Konu     : ${v.data.topic}`,
+        `Dil      : ${v.data.locale.toUpperCase()}`,
+        "",
+        "Mesaj:",
+        v.data.message,
+        "",
+        "—",
+        "Bu bildirim stravion.com iletişim formundan otomatik gönderildi.",
+        "Kaydın tamamı Supabase → contact_requests tablosunda.",
+      ];
+
+      const res = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${resendKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: process.env.NOTIFY_FROM ?? "STRAVION <onboarding@resend.dev>",
+          to: [notifyTo],
+          reply_to: v.data.email,
+          subject: `Yeni görüşme talebi — ${v.data.name} (${v.data.topic})`,
+          text: satirlar.join("\n"),
+        }),
+      });
+
+      if (!res.ok) {
+        console.error("resend error:", res.status, await res.text());
+      }
+    } catch (e) {
+      console.error("resend exception:", e);
+    }
+  }
+
   return NextResponse.json({ ok: true });
 }
