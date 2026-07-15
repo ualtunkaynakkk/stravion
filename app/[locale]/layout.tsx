@@ -76,7 +76,6 @@ export default async function LocaleLayout({
               url: SITE_URL,
               logo: `${SITE_URL}/icon.svg`,
               description: dict.meta.description,
-              email: "hello@stravion.com",
               founder: { "@type": "Person", name: "Ümit Altunkaynak" },
               areaServed: "TR",
               knowsAbout: [

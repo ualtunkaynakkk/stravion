@@ -18,9 +18,6 @@ export default function FinalCta({ locale, t }: { locale: Locale; t: Dictionary[
           <Link className="btn btn-primary" href={sectionPath(locale, "contact")}>
             {t.cta} <span className="arr">→</span>
           </Link>
-          <span className="mail">
-            <a href={`mailto:${t.mail}`}>{t.mail}</a>
-          </span>
         </Reveal>
       </div>
     </section>

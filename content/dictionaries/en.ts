@@ -132,7 +132,6 @@ export const en: Dictionary = {
     title: "Let's turn your business into a future-ready system.",
     text: "In our first session, we assess your current structure, critical performance areas and the transformation opportunities with the highest potential impact — together.",
     cta: "Book a Strategy Session",
-    mail: "hello@stravion.com",
   },
   pages: {
     solutionsTitle: "Measurable transformation across every layer of the business.",
@@ -191,7 +190,7 @@ export const en: Dictionary = {
     success: "Your request has been received.",
     successSub: "We will get back to you within one business day.",
     errors: {
-      generic: "Something went wrong. Please try again or email hello@stravion.com.",
+      generic: "Something went wrong. Please try again in a few minutes.",
       rate: "Too many attempts in a short period. Please try again later.",
       kvkk: "KVKK consent is required to proceed.",
       fields: "Please check the required fields.",

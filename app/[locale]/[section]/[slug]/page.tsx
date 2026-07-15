@@ -71,7 +71,7 @@ export default async function DetailPage({
   );
   const cta = (
     <Reveal className="d-cta">
-      <a className="btn btn-primary" href={`mailto:${dict.finalCta.mail}`}>{dict.finalCta.cta}</a>
+      <Link className="btn btn-primary" href={sectionPath(locale, "contact")}>{dict.finalCta.cta}</Link>
     </Reveal>
   );
 

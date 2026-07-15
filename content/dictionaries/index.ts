@@ -80,7 +80,7 @@ export type Dictionary = {
     cta: string;
     portrait: string;
   };
-  finalCta: { title: string; text: string; cta: string; mail: string };
+  finalCta: { title: string; text: string; cta: string };
   pages: {
     solutionsTitle: string;
     solutionsSub: string;

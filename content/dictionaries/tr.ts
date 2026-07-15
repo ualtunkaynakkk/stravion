@@ -132,7 +132,6 @@ export const tr: Dictionary = {
     title: "İşletmenizi geleceğe hazır bir sisteme dönüştürelim.",
     text: "İlk görüşmede mevcut yapınızı, kritik performans alanlarınızı ve en yüksek etki yaratabilecek dönüşüm fırsatlarını birlikte değerlendiriyoruz.",
     cta: "Strateji Görüşmesi Planla",
-    mail: "hello@stravion.com",
   },
   pages: {
     solutionsTitle: "İşletmenin her katmanında ölçülebilir dönüşüm.",
@@ -191,7 +190,7 @@ export const tr: Dictionary = {
     success: "Talebiniz alındı.",
     successSub: "En geç 1 iş günü içinde size dönüş yapacağız.",
     errors: {
-      generic: "Bir şeyler ters gitti. Lütfen tekrar deneyin veya hello@stravion.com adresine yazın.",
+      generic: "Bir şeyler ters gitti. Lütfen birkaç dakika sonra tekrar deneyin.",
       rate: "Kısa sürede çok fazla deneme yapıldı. Lütfen bir süre sonra tekrar deneyin.",
       kvkk: "Devam etmek için KVKK onayı gereklidir.",
       fields: "Lütfen zorunlu alanları kontrol edin.",
