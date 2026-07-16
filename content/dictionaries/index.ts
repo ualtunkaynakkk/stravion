@@ -121,7 +121,6 @@ export type Dictionary = {
     company: string;
     phone: string;
     topic: string;
-    topics: string[];
     message: string;
     kvkk: string;
     kvkkLink: string;

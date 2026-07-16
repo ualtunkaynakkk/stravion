@@ -3,8 +3,10 @@
 import { useState, type FormEvent } from "react";
 import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/content/dictionaries";
+import { topicOptions } from "@/lib/contact/topics";
 
 export default function ContactForm({ locale, t }: { locale: Locale; t: Dictionary["contact"] }) {
+  const topics = topicOptions(locale);
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -91,9 +93,9 @@ export default function ContactForm({ locale, t }: { locale: Locale; t: Dictiona
 
       <label className="cf-field">
         <span>{t.topic} *</span>
-        <select name="topic" required defaultValue={t.topics[0]}>
-          {t.topics.map((o) => (
-            <option key={o} value={o}>{o}</option>
+        <select name="topic" required defaultValue={topics[0].code}>
+          {topics.map((o) => (
+            <option key={o.code} value={o.code}>{o.label}</option>
           ))}
         </select>
       </label>

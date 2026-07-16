@@ -181,7 +181,6 @@ export const en: Dictionary = {
     company: "Company",
     phone: "Phone",
     topic: "Session topic",
-    topics: ["Strategy & Transformation", "Operational Excellence", "Performance Management", "AI Transformation", "Products (Risk Radar, HR Match AI...)", "Other"],
     message: "Your message",
     kvkk: "I have read and accept the",
     kvkkLink: "Privacy Notice (KVKK)",

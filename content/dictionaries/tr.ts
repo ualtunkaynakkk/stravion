@@ -181,7 +181,6 @@ export const tr: Dictionary = {
     company: "Şirket",
     phone: "Telefon",
     topic: "Görüşme konusu",
-    topics: ["Strateji ve Dönüşüm", "Operasyonel Mükemmeliyet", "Performans Yönetimi", "Yapay Zekâ Dönüşümü", "Ürünler (Risk Radar, HR Match AI...)", "Diğer"],
     message: "Mesajınız",
     kvkk: "Kişisel verilerimin, talebimin yanıtlanması amacıyla işlenmesine ilişkin",
     kvkkLink: "KVKK Aydınlatma Metni'ni",
