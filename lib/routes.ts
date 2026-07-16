@@ -3,7 +3,7 @@ import type { Locale } from "@/lib/i18n";
 export const sections = {
   solutions: { tr: "cozumler", en: "solutions" },
   products: { tr: "urunler", en: "products" },
-  cases: { tr: "vaka-calismalari", en: "case-studies" },
+  cases: { tr: "uygulama-senaryolari", en: "application-scenarios" },
   contact: { tr: "iletisim", en: "contact" },
 } as const;
 

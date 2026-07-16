@@ -3,6 +3,8 @@ import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/content/dictionaries";
 import { solutions } from "@/content/solutions";
 import { detailPath, sectionPath } from "@/lib/routes";
+import { socialLinks } from "@/content/social-links";
+import { companyLinks, resourceLinks } from "@/content/footer-links";
 
 export default function Footer({ locale, t }: { locale: Locale; t: Dictionary["footer"] }) {
   return (
@@ -15,12 +17,21 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary["f
               <span className="tagline">AI-Powered Operational Excellence</span>
             </Link>
             <p>{t.desc}</p>
-            <div className="socials">
-              <a href="#" aria-label="LinkedIn">in</a>
-              <a href="#" aria-label="YouTube">yt</a>
-              <a href="#" aria-label="Instagram">ig</a>
-              <a href="#" aria-label="X">x</a>
-            </div>
+            {socialLinks.length > 0 && (
+              <div className="socials">
+                {socialLinks.map((s) => (
+                  <a
+                    key={s.key}
+                    href={s.url}
+                    aria-label={s.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {s.label}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
           <div className="foot-col">
             <h4>{t.solutionsTitle}</h4>
@@ -34,14 +45,18 @@ export default function Footer({ locale, t }: { locale: Locale; t: Dictionary["f
           </div>
           <div className="foot-col">
             <h4>{t.companyTitle}</h4>
-            <ul>{t.company.map((s) => <li key={s}><a href={`/${locale}#founder`}>{s}</a></li>)}</ul>
+            <ul>
+              {companyLinks(locale).map((l) => (
+                <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+              ))}
+            </ul>
           </div>
           <div className="foot-col">
             <h4>{t.resourcesTitle}</h4>
             <ul>
-              <li><Link href={`/${locale}#insights`}>{t.resources[0]}</Link></li>
-              <li><Link href={sectionPath(locale, "cases")}>{t.resources[1]}</Link></li>
-              {t.resources.slice(2).map((s) => <li key={s}><a href={`/${locale}#insights`}>{s}</a></li>)}
+              {resourceLinks(locale).map((l) => (
+                <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+              ))}
             </ul>
           </div>
         </div>

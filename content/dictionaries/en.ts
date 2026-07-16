@@ -13,7 +13,7 @@ export const en: Dictionary = {
   nav: {
     solutions: "Solutions",
     products: "Products",
-    cases: "Case Studies",
+    cases: "Application Scenarios",
     insights: "Insights",
     about: "About",
     contact: "Contact",
@@ -28,10 +28,16 @@ export const en: Dictionary = {
     primary: "Explore Our Solutions",
     secondary: "Book a Strategy Session",
   },
-  brands: {
-    label: "Trusted by",
-    note: "* Brand area shown as a layout sample — actual client logos will be added once permissions are confirmed.",
-    names: ["MERIDIAN", "NOVARA", "ALTUS", "VELORA", "KREON", "ORBIS", "LUMEN&CO", "SILVANO"],
+  expertise: {
+    label: "Experience & Areas of Expertise",
+    items: [
+      "Fashion Retail",
+      "Multi-Location Operations",
+      "Store Management",
+      "Performance Management",
+      "People & Organization",
+      "AI-Powered Decision Systems",
+    ],
   },
   problem: {
     eyebrow: "Why STRAVION",
@@ -85,10 +91,10 @@ export const en: Dictionary = {
     ],
   },
   cases: {
-    eyebrow: "Case Studies",
-    title: "Real results, sustainable impact",
-    viewAll: "View All Case Studies",
-    tag: "Representative Engagement",
+    eyebrow: "Application Scenarios",
+    title: "How our approach works in the field",
+    viewAll: "View All Scenarios",
+    tag: "Representative Scenario",
     scopeLabel: "Scope",
   },
   insights: {
@@ -139,7 +145,7 @@ export const en: Dictionary = {
     productsTitle: "A product ecosystem born from consulting expertise.",
     productsSub: "We turn the systems we build in the field into scalable software products.",
     casesTitle: "Where strategy turns into execution.",
-    casesSub: "Representative engagements showing how our approach applies to real operational problems.",
+    casesSub: "These are not client cases but representative application scenarios: they show how our approach applies to real operational problems.",
     problemsTitle: "What problems does it solve?",
     audienceTitle: "Who is it for?",
     scopeTitle: "Scope of services",

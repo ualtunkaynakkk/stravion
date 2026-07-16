@@ -13,7 +13,7 @@ export const tr: Dictionary = {
   nav: {
     solutions: "Çözümler",
     products: "Ürünler",
-    cases: "Vaka Çalışmaları",
+    cases: "Uygulama Senaryoları",
     insights: "İçgörüler",
     about: "Hakkımızda",
     contact: "İletişim",
@@ -28,10 +28,16 @@ export const tr: Dictionary = {
     primary: "Çözümlerimizi Keşfedin",
     secondary: "Strateji Görüşmesi Alın",
   },
-  brands: {
-    label: "Güvenen Markalar",
-    note: "* Marka alanı yerleşim örneğidir — gerçek referans logoları izinler netleşince eklenecektir.",
-    names: ["MERIDIAN", "NOVARA", "ALTUS", "VELORA", "KREON", "ORBIS", "LUMEN&CO", "SILVANO"],
+  expertise: {
+    label: "Deneyim ve Uzmanlık Alanları",
+    items: [
+      "Moda Perakendesi",
+      "Çok Lokasyonlu Operasyon",
+      "Mağaza Yönetimi",
+      "Performans Yönetimi",
+      "İnsan ve Organizasyon",
+      "AI Destekli Karar Sistemleri",
+    ],
   },
   problem: {
     eyebrow: "Neden STRAVION",
@@ -85,10 +91,10 @@ export const tr: Dictionary = {
     ],
   },
   cases: {
-    eyebrow: "Vaka Çalışmaları",
-    title: "Gerçek sonuçlar, sürdürülebilir etki",
-    viewAll: "Tüm Vaka Çalışmalarını Görüntüle",
-    tag: "Temsili Proje",
+    eyebrow: "Uygulama Senaryoları",
+    title: "Yaklaşımımız sahada nasıl uygulanır?",
+    viewAll: "Tüm Senaryoları Görüntüle",
+    tag: "Temsili Senaryo",
     scopeLabel: "Kapsam",
   },
   insights: {
@@ -139,7 +145,7 @@ export const tr: Dictionary = {
     productsTitle: "Danışmanlık uzmanlığından doğan ürün ekosistemi.",
     productsSub: "Sahada kurduğumuz sistemleri, ölçeklenebilir yazılım ürünlerine dönüştürüyoruz.",
     casesTitle: "Stratejinin uygulamaya dönüştüğü yer.",
-    casesSub: "Temsili projeler; yaklaşımımızın gerçek operasyon problemlerine nasıl uygulandığını gösterir.",
+    casesSub: "Bunlar müşteri vakası değil, temsili uygulama senaryolarıdır: yaklaşımımızın gerçek operasyon problemlerine nasıl uygulandığını gösterirler.",
     problemsTitle: "Hangi sorunları çözer?",
     audienceTitle: "Kimler için uygundur?",
     scopeTitle: "Hizmet kapsamı",

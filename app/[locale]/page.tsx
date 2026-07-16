@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { isLocale } from "@/lib/i18n";
 import { getDictionary } from "@/content/dictionaries";
 import Hero from "@/components/sections/Hero";
-import Brands from "@/components/sections/Brands";
+import Expertise from "@/components/sections/Expertise";
 import Problem from "@/components/sections/Problem";
 import Approach from "@/components/sections/Approach";
 import Solutions from "@/components/sections/Solutions";
@@ -25,7 +25,7 @@ export default async function HomePage({
   return (
     <main id="main">
       <Hero t={dict.hero} />
-      <Brands t={dict.brands} />
+      <Expertise t={dict.expertise} />
       <Problem t={dict.problem} />
       <Approach t={dict.approach} />
       <Solutions locale={locale} t={dict.solutions} />

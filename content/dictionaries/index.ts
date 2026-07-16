@@ -25,7 +25,7 @@ export type Dictionary = {
     primary: string;
     secondary: string;
   };
-  brands: { label: string; note: string; names: string[] };
+  expertise: { label: string; items: string[] };
   problem: {
     eyebrow: string;
     title: string;
